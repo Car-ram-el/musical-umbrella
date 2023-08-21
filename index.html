@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21 Pilots</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="assets/logo.png" alt="They rock really!" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="https://music.youtube.com/playlist?list=OLAK5uy_nBZwH-qHNY6l8n4EHnjkhYO8p3lcukTYI">Blurryface</a></li>
+                <li><a href="https://music.youtube.com/playlist?list=OLAK5uy_l1ES29SnsvyUpQ-w3bYFtVzHLa97g8vKM">Trench</a></li>
+                <li><a href="https://music.youtube.com/playlist?list=OLAK5uy_nDOgt3wUt8qMCR-KqAEJZ-SwqI4WtnG_o">Vessel</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="leftCol">
+                <h1>TAKING <br>MY <br> TIME <br> ON <br> MY <br> RIDE...</h1>
+            </div>
+            <div class="rightCol">
+                <img src="assets/sPlay.png" alt="song" id="icon">
+            </div>
+        </div>
+    </div>
+
+    <audio id="chlorine"><source src="assets/chlorine.mp3" type="audio/mp3"></audio>
+    <script>
+        let chlorine=document.getElementById("chlorine");
+        let icon=document.getElementById("icon");
+        document.getElementById("icon").onclick= function(){
+            if(chlorine.paused){
+                chlorine.play();
+                icon.src= "assets/sPause.png";
+            }
+            else{ 
+                chlorine.pause();
+                icon.src="assets/sPlay.png";
+            }
+        }
+    </script>
+</body>
+</html>
